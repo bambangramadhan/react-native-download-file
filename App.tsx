@@ -41,9 +41,7 @@ function App(): React.JSX.Element {
     'https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?cs=srgb&dl=pexels-pixabay-460672.jpg';
   const pathPDF =
     'https://my.cumbria.ac.uk/media/MyCumbria/Documents/ebooksGuide.pdf';
-  const pathXLSX =
-    'https://api-ad1.omidev.my.id/storage/calculator/file-1717387463565.xlsx';
-  const path = pathXLSX;
+  const path = pathPDF;
   const ext = path.split('.').pop();
   const fileName = `file_${Math.floor(
     date.getTime() + date.getSeconds() / 2,
@@ -198,9 +196,6 @@ function App(): React.JSX.Element {
       </View>
       <TouchableOpacity style={styles.downloadBtn} onPress={downloadFile}>
         <Text style={{color: 'white', fontWeight: 'bold'}}>DOWNLOAD</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={downloadFile}>
-        <Text style={{color: '#fff', fontWeight: 'bold'}}>DOWNLOAD</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
